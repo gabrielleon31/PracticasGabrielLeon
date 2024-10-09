@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gabriel Leon</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio">
+        <h2>Inicio: Sobre mí</h2>
+        <p>Nací en Cuba (La Habana) el 31/12/2001. Mis padres son Leonel Leon Garcia y Mariela del Carmen Real Espronceda.
+            Tengo 2 hermanos mayores, uno de 31 años y el otro de 34 años. LLevo en España desde los 11 años. Soy un chico común y corriente. 
+            Tengo una personalidad amigable y me gusta rodearme de gente positiva. Mis amigos me describen como alguien confiable y leal, alguien 
+            en quien pueden contar. Tengo una variedad de intereses, desde la música hasta los deportes. Me encanta escuchar música de diferentes 
+            géneros, y siempre estoy dispuesto a probar algo nuevo. Me considero una persona trabajadora y me tomo en serio mis responsabilidades. 
+            Actualmente, estoy enfocado en mi curso y en mis objetivos personales. Me gusta aprender cosas nuevas y enfrentar desafíos que me ayuden 
+            a crecer como persona. La familia es importante para mí, y paso tiempo de calidad con ellos siempre que puedo. También disfruto de salir 
+            a cenar o ver una película con amigos, y valoro mucho las relaciones personales. En general, soy un chico normal.</p>
+    </section>
+    
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="galeria">
+            <div class="proyecto">
+                <img src="./img/studio.jpg" alt="Proyecto 1">
+                <p>Proyecto sobre el studio ghibli utilizando una API.</p>
+            </div>
+            <div class="proyecto">
+                <img src="./img/pokemon.png" alt="Proyecto 2">
+                <p>Proyecto de una pokedex utilizando una API.</p>
+            </div>
+            <div class="proyecto">
+                <img src="./img/mongoDB.png" alt="Proyecto 3">
+                <p>Proyecto de MongoDB sobre contaminantes en Barcelona.</p>
+            </div>
+        </div>
+    </section>      
+    
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <table>
+            <tr>
+                <th>HTML</th>
+                <th>CSS</th>
+                <th>JavaScript</th>
+                <th>Python</th>
+                <th>SQL</th>
+                <th>Git</th>
+            </tr>
+            <tr>
+                <td><img src="./img/html.png" alt="HTML"></td>
+                <td><img src="./img/css.png" alt="CSS"></td>
+                <td><img src="./img/js.png" alt="JavaScript"></td>
+                <td><img src="./img/python.png" alt="Python"></td>
+                <td><img src="./img/sql.png" alt="SQL"></td>
+                <td><img src="./img/git.png" alt="Git"></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="submit_contacto.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>© 2024 Gabriel Leon</p>
+    </footer>
+</body>
+</html>
+    
