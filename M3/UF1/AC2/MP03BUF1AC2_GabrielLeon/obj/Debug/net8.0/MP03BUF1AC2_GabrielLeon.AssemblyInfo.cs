@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MP03BUF1AC2_GabrielLeon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31ca1ac561cd544694c6adc36e12d4914643f915")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66e9699e01252acb1e86f0441e0315f3a8042174")]
 [assembly: System.Reflection.AssemblyProductAttribute("MP03BUF1AC2_GabrielLeon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MP03BUF1AC2_GabrielLeon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
