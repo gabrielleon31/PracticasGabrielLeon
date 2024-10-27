@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MP3BAC1_Gabriel_Leon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31ca1ac561cd544694c6adc36e12d4914643f915")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62a0766e90d02da9d2fc9a3188f80f9c861ea368")]
 [assembly: System.Reflection.AssemblyProductAttribute("MP3BAC1_Gabriel_Leon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MP3BAC1_Gabriel_Leon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
