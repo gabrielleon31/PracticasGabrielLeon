@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #20763e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 600px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center; 
+    color: white;
+}
+
+.grande, .peque {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.grande {
+    width: 180px;
+    height: 90px;
+}
+
+.peque {
+    width: 90px;
+    height: 90px;
+}
+
+.mail {
+    background-color: rgb(59, 118, 155); 
+}
+
+.calendar {
+    background-color: rgb(68, 18, 161); 
+}
+
+.ie {
+    background-color: rgb(24, 119, 214); 
+}
+
+.store {
+    background-color: rgb(36, 143, 26); 
+}
+
+.people {
+    background-color: rgb(160, 81, 11); 
+}
+
+.photos {
+    background-color: rgb(59, 118, 155);
+}
+
+.maps {
+    background-color: rgb(154, 45, 152); 
+}
+
+.sd {
+    background-color: rgb(6, 16, 129); 
+}
+
+.messa {
+    background-color: rgb(154, 45, 152);
+}
+
+.video {
+    background-color: rgb(140, 25, 25); 
+}
+
+.music {
+    background-color: rgb(160, 81, 11);
+}
+
+.desk {
+    background-color: rgb(36, 143, 26);
+}
+
+.weather {
+    background-color: rgb(24, 119, 214);
+}
+
+.xbox {
+    background-color: rgb(36, 143, 26);
+}
+
+.camera {
+    background-color: rgb(140, 25, 25);
+}
