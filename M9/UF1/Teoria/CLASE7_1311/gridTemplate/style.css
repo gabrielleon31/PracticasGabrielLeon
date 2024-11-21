@@ -1,0 +1,51 @@
+.container {
+  display: grid;
+
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 30px;
+
+}
+
+.container>div {
+  border: solid 1px red;
+}
+
+
+
+.item1 {
+  background: red;
+  grid-area: header;
+  padding: 200px;
+
+}
+
+.item2 {
+  background: blue;
+  grid-area: menu;
+  padding: 200px;
+
+}
+
+.item3 {
+  background: yellow;
+  grid-area: main;
+  padding: 200px;
+
+}
+
+.item4 {
+  background: green;
+  grid-area: right;
+  padding: 200px;
+
+}
+
+.item5 {
+  background: grey;
+  grid-area: footer;
+  padding: 200px;
+
+}
