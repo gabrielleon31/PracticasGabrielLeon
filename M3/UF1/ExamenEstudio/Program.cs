@@ -1,6 +1,6 @@
 ﻿// class Program {   
 // private static void Main(string[] args) {
-// Usuario usuario = new Usuario { Nombre = "Juan" };
+// Usuario usuario = new Usuario();
 // UsuarioVIP usuarioVIP = new UsuarioVIP { Nombre = "Ana", NivelVIP = 2 };
 // usuario.MensajeConsola();  
 // usuarioVIP.MensajeConsola(); }}
@@ -118,29 +118,34 @@
 //         Persona persona1 = new Persona("Lema");
 //         // jefe.GetNombre(); 
 //         // empleado.GetNombre(); 
-//         jefe.GetDepartament();
-//         empleado.GetSalario();
+//         // jefe.GetDepartament();
+//         // empleado.GetSalario();
 //         persona1.GetNombre();
 //     }
 // }
 
+//-----------------------------
 
-
-class A  
-{  
-    public virtual void show()  
-    {  
-        Console.WriteLine("Hello: Base Class!");  
-        Console.ReadLine();  
-    }  
-}  
+// class A  
+// {  
+//     public virtual void show()  
+//     {  
+//         Console.WriteLine("Hello: Base Class!");  
+//         Console.ReadLine();  
+//     }  
+// }  
   
 
-class B : A  
-{  
-    public override void show()  
-    {  
-        Console.WriteLine("Hola!");  
-        Console.ReadLine();  
-    }  
-}
+// class B : A  
+// {  
+//     public override void show()  
+//     {  
+//         Console.WriteLine("Hola!");  
+//         Console.ReadLine();  
+//     }  
+// }
+
+//-------------------------------------------------------------------------
+
+
+

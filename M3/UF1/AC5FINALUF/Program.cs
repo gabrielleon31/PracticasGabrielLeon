@@ -1,15 +1,11 @@
-﻿using System;
-
-namespace JuegoDeAventura
+﻿namespace JuegoDeAventura
 {
-    // Clase base Personaje
     public class Personaje
     {
         public string Nombre { get; set; }
         public int Vida { get; set; }
         public int Nivel { get; set; }
         public int PuntosHabilidad { get; set; }
-        public int TurnosEspecial { get; set; }
         public int EnemigosDerrotados { get; set; }
 
         public Personaje(string nombre, int vida, int nivel)
@@ -18,31 +14,48 @@ namespace JuegoDeAventura
             Vida = vida;
             Nivel = nivel;
             PuntosHabilidad = 0;
-            TurnosEspecial = 0;
             EnemigosDerrotados = 0;
         }
 
-        // Método para atacar (tira de dados)
+        // Metodo para atacar (tirada de dos dados)
         public virtual int Atacar()
         {
             Random rand = new Random();
-            return rand.Next(1, 7) + rand.Next(1, 7); // Tirada de dos dados de 6 caras
+            int dado1 = rand.Next(1, 7); 
+            int dado2 = rand.Next(1, 7); 
+            int ataque = dado1 + dado2;
+
+            // Asegura que el ataque no sea superior a 12
+            if (ataque > 12) ataque = 12;
+
+            return ataque;
         }
 
-        // Método para defenderse
+        // Metodo para defender (reduce la vida en funcion del daño recibido)
         public virtual void Defender(int dano)
         {
             Vida -= dano;
-            if (Vida < 0) Vida = 0;
+            if (Vida < 0) Vida = 0; // Evitar que la vida sea negativa
         }
+    }
 
-        // Método para ejecutar una misión
+    public class Jugador : Personaje
+    {
+        public int GoblinsDerrotados { get; set; }
+        public int DragonesDerrotados { get; set; }
+
+        public Jugador(string nombre) : base(nombre, 10, 10) { }
+
         public virtual void EjecutarMision()
         {
-            Console.WriteLine($"{Nombre} está realizando una misión de exploración.");
+            Console.WriteLine($"{Nombre} esta explorando y enfrentando enemigos.");
         }
 
-        // Método para aumentar puntos de habilidad
+        public virtual int AtacarJugador()
+        {
+            return Atacar();
+        }
+
         public void AumentarPuntosHabilidad()
         {
             EnemigosDerrotados++;
@@ -50,56 +63,34 @@ namespace JuegoDeAventura
             {
                 PuntosHabilidad++;
                 Console.WriteLine($"{Nombre} ha ganado un punto de habilidad.");
-                EnemigosDerrotados = 0; // Resetear el contador
+                EnemigosDerrotados = 0; // Resetear el contador de enemigos derrotados
             }
         }
-    }
 
-    // Clase derivada Jugador
-    public class Jugador : Personaje
-    {
-        public Jugador(string nombre) : base(nombre, 10, 10) { }  // Nivel inicial del jugador es 10
-
-        public virtual void SubirNivel()
+        public void SubirNivel()
         {
             Nivel++;
-            Console.WriteLine($"{Nombre} ha subido de nivel. Ahora está en el nivel {Nivel}.");
+            Console.WriteLine($"{Nombre} ha subido de nivel. Ahora esta en el nivel {Nivel}.");
         }
 
-        public virtual void EjecutarMision()
+        public bool PuedeEnfrentarGranJefe()
         {
-            Console.WriteLine($"{Nombre} está explorando y enfrentando enemigos.");
+            return GoblinsDerrotados >= 4 && DragonesDerrotados >= 1;
         }
     }
 
-    // Clases derivadas de Jugador (Guerrero, Mago, Arquero)
     public class Guerrero : Jugador
     {
         public Guerrero(string nombre) : base(nombre)
         {
-            Vida = 12; // Guerreros tienen más vida
+            Vida = 12;
         }
 
-        public void BloquearAtaque()
-        {
-            if (TurnosEspecial == 3)
-            {
-                Console.WriteLine($"{Nombre} ha bloqueado un ataque.");
-                TurnosEspecial = 0; // Reseteamos el contador de turnos especiales
-            }
-            else
-            {
-                Console.WriteLine($"{Nombre} no puede bloquear el ataque aún. Debe esperar {3 - TurnosEspecial} turno(s) más.");
-                TurnosEspecial++; // Incrementar el contador de turnos
-            }
-        }
-
-        public override int Atacar()
+        public override int AtacarJugador()
         {
             int ataque = base.Atacar();
-            double ataqueConHabilidad = ataque + (PuntosHabilidad * 0.10); // Se agregan los puntos de habilidad
-            Console.WriteLine($"{Nombre} ataca con fuerza brutal.");
-            return (int)ataqueConHabilidad + 2; // Guerrero tiene un bonus de ataque (+2)
+            Console.WriteLine($"{Nombre} ataca con su espada.");
+            return ataque + 2; // Guerrero tiene un bono de +2
         }
     }
 
@@ -107,29 +98,14 @@ namespace JuegoDeAventura
     {
         public Mago(string nombre) : base(nombre)
         {
-            Vida = 8; // Menos vida, pero más mágico
+            Vida = 8;
         }
 
-        public void RecuperarVida()
-        {
-            if (TurnosEspecial == 3)
-            {
-                Vida += 2;
-                Console.WriteLine($"{Nombre} ha recuperado 2 puntos de vida.");
-                TurnosEspecial = 0; // Reseteamos el contador de turnos especiales
-            }
-            else
-            {
-                TurnosEspecial++;
-            }
-        }
-
-        public override int Atacar()
+        public override int AtacarJugador()
         {
             int ataque = base.Atacar();
-            double ataqueConHabilidad = ataque + (PuntosHabilidad * 0.10); // Se agregan los puntos de habilidad
             Console.WriteLine($"{Nombre} lanza un hechizo!");
-            return (int)ataqueConHabilidad + 4; // Mago tiene un bonus de ataque (+4)
+            return ataque + 4; // Mago tiene un bono de +4
         }
     }
 
@@ -137,41 +113,31 @@ namespace JuegoDeAventura
     {
         public Arquero(string nombre) : base(nombre)
         {
-            Vida = 10; // Menos vida que un Guerrero, pero mejor agilidad
+            Vida = 10;
         }
 
-        // Habilidad especial: Doble tiro
-        public void DobleTiro()
-        {
-            if (TurnosEspecial == 3)
-            {
-                Console.WriteLine($"{Nombre} realiza un doble tiro!");
-                TurnosEspecial = 0; // Reseteamos el contador de turnos especiales
-            }
-            else
-            {
-                Console.WriteLine($"{Nombre} no puede realizar un doble tiro aún. Debe esperar {3 - TurnosEspecial} turno(s) más.");
-                TurnosEspecial++; // Incrementar el contador de turnos
-            }
-        }
-
-        public override int Atacar()
+        public override int AtacarJugador()
         {
             int ataque = base.Atacar();
-            double ataqueConHabilidad = ataque + (PuntosHabilidad * 0.10); // Se agregan los puntos de habilidad
             Console.WriteLine($"{Nombre} dispara con su arco.");
-            return (int)ataqueConHabilidad + 3; // Arquero tiene un bonus de ataque (+3)
+            return ataque + 3; // Arquero tiene un bono de +3
         }
     }
 
-    // Clases de Enemigos
     public class Enemigo : Personaje
     {
-        public Enemigo(string nombre, int vida, int nivel) : base(nombre, vida, nivel) { }
+        public int NivelDeAtaque { get; set; }
+
+        public Enemigo(string nombre) : base(nombre, new Random().Next(5, 13), new Random().Next(0, 16))
+        {
+            NivelDeAtaque = new Random().Next(1, 13); // Nivel de ataque aleatorio entre 1 y 12
+        }
 
         public virtual int Atacar()
         {
-            return base.Atacar(); // Enemigos básicos tienen un ataque normal
+            int ataque = base.Atacar() + NivelDeAtaque;
+            if (ataque > 12) ataque = 12;
+            return ataque;
         }
 
         public virtual void EjecutarMision()
@@ -182,128 +148,200 @@ namespace JuegoDeAventura
 
     public class EnemigoBasico : Enemigo
     {
-        public EnemigoBasico(string nombre) : base(nombre, 5, 1) { }
-
-        public override int Atacar()
-        {
-            return base.Atacar(); // Enemigos básicos tienen un ataque normal
-        }
+        public EnemigoBasico(string nombre) : base(nombre) { }
     }
 
     public class EnemigoEspecial : Enemigo
     {
         public int Resistencia { get; set; }
+        private int turnosDeResistencia;
 
-        public EnemigoEspecial(string nombre) : base(nombre, 8, 2)
+        public EnemigoEspecial(string nombre) : base(nombre)
         {
-            Resistencia = new Random().Next(0, 6); // Resistencia aleatoria entre 0 y 5
+            Resistencia = new Random().Next(0, 6);
+            turnosDeResistencia = 0;
         }
 
         public override int Atacar()
         {
             int ataque = base.Atacar();
-            Console.WriteLine($"{Nombre} utiliza su resistencia especial.");
-            return ataque - Resistencia; // La resistencia reduce el daño
+            return ataque - Resistencia;
+        }
+
+        public void ReducirResistencia()
+        {
+            if (Resistencia > 0)
+            {
+                Resistencia--;
+                Console.WriteLine($"{Nombre}'s resistencia ha disminuido a {Resistencia}. Mas facil de derrotar ahora.");
+            }
+            else
+            {
+                Console.WriteLine($"{Nombre} ya no tiene resistencia.");
+            }
         }
     }
 
     public class Boss : Enemigo
     {
         public int Resistencia { get; set; }
+        private int turnosRegeneracion;
 
-        public Boss(string nombre) : base(nombre, 15, 20)
+        public Boss(string nombre) : base(nombre)
         {
-            Resistencia = 5; // El Boss tiene resistencia inicial de 5
+            Nivel = 20;
+            Vida = 15;
+            Resistencia = 5;
+            turnosRegeneracion = 0;
         }
 
+        // Metodo de ataque del Boss (posibilidad de ataque doble)
         public override int Atacar()
         {
             Random rand = new Random();
+            int ataqueTotal = base.Atacar();
             if (rand.Next(0, 2) == 1)
             {
-                Console.WriteLine($"{Nombre} realiza un doble ataque.");
-                return base.Atacar() + base.Atacar(); // Doble ataque
+                ataqueTotal += base.Atacar();
+            }
+            return ataqueTotal;
+        }
+
+        public void RegenerarVida()
+        {
+            if (turnosRegeneracion == 3)
+            {
+                Vida += 2;
+                Console.WriteLine($"{Nombre} ha recuperado 2 puntos de vida.");
+                turnosRegeneracion = 0;
             }
             else
             {
-                Console.WriteLine($"{Nombre} ataca normalmente.");
-                return base.Atacar();
+                turnosRegeneracion++;
             }
-        }
-
-        public override void EjecutarMision()
-        {
-            Console.WriteLine($"{Nombre} está desatando su furia.");
         }
     }
 
-    // Clase principal del programa
-    class Programa
+    class Program
     {
         static void Main(string[] args)
         {
-            Jugador jugador = new Arquero("Carlos Arquero");
+            Console.WriteLine("Introduce el nombre del jugador:");
+            string nombreJugador = Console.ReadLine();
+            Jugador jugador = new Guerrero(nombreJugador);
+
             Enemigo enemigo = new EnemigoBasico("Goblin");
+
+            int turno = 1;
+            DateTime inicioJuego = DateTime.Now;  
             Random rand = new Random();
 
-            // Contador de turnos
-            int turno = 1;
-            DateTime inicioJuego = DateTime.Now;
-
-            // Juego hasta que el jugador pierda o venza al boss
-            while (jugador.Vida > 0 && turno <= 10) // Limitar a 10 turnos de juego por ejemplo
+            while (jugador.Vida > 0)
             {
+                Console.Clear();
                 Console.WriteLine($"Turno {turno} - {jugador.Nombre} vs {enemigo.Nombre}");
 
-                // Jugador ataca al enemigo
-                int ataqueJugador = jugador.Atacar();
-                Console.WriteLine($"{jugador.Nombre} atacó con {ataqueJugador} puntos.");
+                int ataqueJugador = jugador.AtacarJugador();
+                Console.WriteLine($"{jugador.Nombre} ataca con {ataqueJugador} puntos.");
+                enemigo.Defender(ataqueJugador);
 
-                // Enemigo ataca al jugador
-                int ataqueEnemigo = enemigo.Atacar();
-                Console.WriteLine($"{enemigo.Nombre} atacó con {ataqueEnemigo} puntos.");
-                jugador.Defender(ataqueEnemigo);
-
-                // Mostrar resultados de vida
-                Console.WriteLine($"{jugador.Nombre} tiene {jugador.Vida} de vida.");
-
-                // Misión
-                jugador.EjecutarMision();
-                enemigo.EjecutarMision();
-
-                // Simular eventos de sorpresa (trampas, cofres)
-                int eventoSorpresa = rand.Next(0, 3);
-                if (eventoSorpresa == 0)
-                    Console.WriteLine("¡Has encontrado un cofre con una poción de vida!");
-                else if (eventoSorpresa == 1)
-                    Console.WriteLine("¡Cuidado! Has caído en una trampa.");
-
-                // Habilidad especial del Arquero (doble tiro)
-                if (jugador is Arquero arquero)
+                if (enemigo.Vida > 0)
                 {
-                    arquero.DobleTiro();
+                    int ataqueEnemigo = enemigo.Atacar();
+                    Console.WriteLine($"{enemigo.Nombre} ataca con {ataqueEnemigo} puntos.");
+                    jugador.Defender(ataqueEnemigo);
                 }
 
-                // Mostrar puntos de habilidad
-                Console.WriteLine($"Puntos de habilidad: {jugador.PuntosHabilidad}");
+                if (enemigo.Vida <= 0)
+                {
+                    Console.WriteLine($"{enemigo.Nombre} ha sido derrotado.");
+                    jugador.AumentarPuntosHabilidad();
+                    if (enemigo is Boss)
+                    {
+                        Console.WriteLine("¡Felicidades! Has derrotado al Gran Jefe. ¡Has ganado el juego!");
+                        break;
+                    }
+                    else
+                    {
+                        if (jugador.PuedeEnfrentarGranJefe())
+                        {
+                            enemigo = new Boss("Gran Jefe");
+                        }
+                        else
+                        {
+                            enemigo = GenerarEnemigo(rand);
+                        }
+                    }
+                    jugador.SubirNivel();
+                }
 
-                // Mostrar tiempo transcurrido en formato hh:mm
+                MostrarEstado(jugador, enemigo);
+
+                EventoSorpresa(rand, jugador);
+
+                // Actualizar y mostrar el tiempo jugado
                 TimeSpan tiempoJugado = DateTime.Now - inicioJuego;
-                Console.WriteLine($"Tiempo jugado: {tiempoJugado.Hours:D2}:{tiempoJugado.Minutes:D2}");
+                Console.WriteLine($"Tiempo jugado: {tiempoJugado.Minutes:D2}:{tiempoJugado.Seconds:D2}");
 
-                // Aumentar turno
                 turno++;
-
-                // Pausa para ver la información
                 Console.WriteLine("\nPresiona Enter para continuar...");
                 Console.ReadLine();
             }
 
-            // Fin del juego
-            if (jugador.Vida <= 0)
-                Console.WriteLine($"{jugador.Nombre} ha sido derrotado. ¡Fin del juego!");
-            else
-                Console.WriteLine($"{jugador.Nombre} ha ganado el juego. ¡Felicidades!");
+            Console.WriteLine($"{jugador.Nombre} ha sido derrotado. ¡Fin del juego!");
+            MostrarResumenFinal(jugador);
+        }
+
+        static void MostrarEstado(Jugador jugador, Enemigo enemigo)
+        {
+            Console.WriteLine($"\n--- Resumen de Turno ---");
+            Console.WriteLine($"{jugador.Nombre}: Vida = {jugador.Vida}, Nivel = {jugador.Nivel}, Puntos de Habilidad = {jugador.PuntosHabilidad}");
+            Console.WriteLine($"{enemigo.Nombre}: Vida = {enemigo.Vida}, Nivel = {enemigo.Nivel}");
+            Console.WriteLine("------------------------");
+        }
+
+        static Enemigo GenerarEnemigo(Random rand)
+        {
+            Enemigo enemigo;
+            int tipoEnemigo = rand.Next(0, 3);  
+            switch (tipoEnemigo)
+            {
+                case 0:
+                    enemigo = new EnemigoBasico("Goblin");
+                    break;
+                case 1:
+                    enemigo = new EnemigoEspecial("Dragon");
+                    break;
+                case 2:
+                    enemigo = new Boss("Gran Jefe");
+                    break;
+                default:
+                    enemigo = new EnemigoBasico("Goblin");
+                    break;
+            }
+            return enemigo;
+        }
+
+        static void EventoSorpresa(Random rand, Jugador jugador)
+        {
+            int evento = rand.Next(0, 3);  
+            if (evento == 0)
+            {
+                Console.WriteLine("¡Has encontrado un cofre con una poción de vida!");
+                jugador.Vida += 5;
+            }
+            else if (evento == 1)
+            {
+                Console.WriteLine("¡Cuidado! Has caído en una trampa.");
+                jugador.Vida -= 5;
+            }
+        }
+
+        static void MostrarResumenFinal(Jugador jugador)
+        {
+            Console.WriteLine("\n--- Resumen Final ---");
+            Console.WriteLine($"Nivel Final: {jugador.Nivel}");
+            Console.WriteLine($"Puntos de Habilidad: {jugador.PuntosHabilidad}");
         }
     }
 }

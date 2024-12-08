@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AC4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ae5954ab423ddc838e172e8d87c69ea4e8428e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+375bddffd1839d1f3361f4f61a43ee6ad93198be")]
 [assembly: System.Reflection.AssemblyProductAttribute("AC4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AC4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

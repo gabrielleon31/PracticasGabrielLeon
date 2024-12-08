@@ -21,7 +21,7 @@
 //        catch (FormatException e) {
 
 //         Console.WriteLine($"Tienes este error: {e.Message}");
-
+    
 //        }
 //     }
 // }
@@ -283,31 +283,31 @@
 
 // Escribe un programa que cree un método que tome una cadena como entrada y la convierta a mayúsculas. 
 // Controla la excepción NullReferenceException que se produce si la cadena de entrada es nula.
-internal class Program
-{
-    public static void Main(string[] args)
-    {
-        try
-        {
-            Console.WriteLine("Escribe una cadena: ");
-            string cadena = Console.ReadLine();
+// internal class Program
+// {
+//     public static void Main(string[] args)
+//     {
+//         try
+//         {
+//             Console.WriteLine("Escribe una cadena: ");
+//             string cadena = Console.ReadLine();
 
-            if (cadena == null)
-            {
-                throw new NullReferenceException("La cadena no puede ser nula");
-            }
+//             if (cadena == null)
+//             {
+//                 throw new NullReferenceException("La cadena no puede ser nula");
+//             }
 
-            string cadenaMayusculas = ConvertirAMayusculas(cadena);
-            Console.WriteLine("Cadena en mayusculas: " + cadenaMayusculas);
-        }
-        catch (NullReferenceException ex)
-        {
-            Console.WriteLine("Tienes este error: " + ex.Message);
-        }
-    }
+//             string cadenaMayusculas = ConvertirAMayusculas(cadena);
+//             Console.WriteLine("Cadena en mayusculas: " + cadenaMayusculas);
+//         }
+//         catch (NullReferenceException ex)
+//         {
+//             Console.WriteLine("Tienes este error: " + ex.Message);
+//         }
+//     }
 
-    private static string ConvertirAMayusculas(string cadena)
-    {
-        return cadena.ToUpper();
-    }
-}
+//     private static string ConvertirAMayusculas(string cadena)
+//     {
+//         return cadena.ToUpper();
+//     }
+// }
