@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("M3UF5AC4_GabrielLeon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+638af022c5da6be1421e827586fb362953fad7a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e9919d97f7828ffd7de9088e55b4cd4e38cfc43")]
 [assembly: System.Reflection.AssemblyProductAttribute("M3UF5AC4_GabrielLeon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("M3UF5AC4_GabrielLeon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
