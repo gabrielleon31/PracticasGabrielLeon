@@ -1,0 +1,15 @@
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\obj\Debug\net8.0\M3UF5AC5_GabrielLeon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\obj\Debug\net8.0\M3UF5AC5_GabrielLeon.AssemblyInfoInputs.cache
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\obj\Debug\net8.0\M3UF5AC5_GabrielLeon.AssemblyInfo.cs
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\obj\Debug\net8.0\M3UF5AC5_GabrielLeon.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\obj\Debug\net8.0\M3UF5AC5_GabrielLeon.sourcelink.json
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\bin\Debug\net8.0\M3UF5AC5_GabrielLeon.exe
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\bin\Debug\net8.0\M3UF5AC5_GabrielLeon.deps.json
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\bin\Debug\net8.0\M3UF5AC5_GabrielLeon.runtimeconfig.json
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\bin\Debug\net8.0\M3UF5AC5_GabrielLeon.dll
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\bin\Debug\net8.0\M3UF5AC5_GabrielLeon.pdb
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\obj\Debug\net8.0\M3UF5AC5_GabrielLeon.dll
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\obj\Debug\net8.0\refint\M3UF5AC5_GabrielLeon.dll
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\obj\Debug\net8.0\M3UF5AC5_GabrielLeon.pdb
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\obj\Debug\net8.0\M3UF5AC5_GabrielLeon.genruntimeconfig.cache
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\M3UF5AC5_GabrielLeon\obj\Debug\net8.0\ref\M3UF5AC5_GabrielLeon.dll
