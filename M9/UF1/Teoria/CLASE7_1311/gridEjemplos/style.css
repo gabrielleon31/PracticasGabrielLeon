@@ -1,0 +1,134 @@
+body {
+  color: white;
+  font-style: italic;
+  font-family: sans-serif;
+  font-size: 50px;
+}
+
+.item1 {
+  background-color: purple;
+  padding: 40px;
+}
+
+.item2 {
+  background-color: yellow;
+  padding: 40px
+}
+
+.item3 {
+  background-color: green;
+  padding: 40px
+}
+
+.item4 {
+  background-color: blue;
+  padding: 40px
+}
+
+.item5 {
+  background-color: red;
+  padding: 40px
+}
+
+.item6 {
+  background-color: lightcoral;
+  padding: 40px
+}
+
+
+
+/** Grid Container con 3 columnas y 3 filas con distintos tamaños */
+
+/* .container {
+  display: grid;
+  grid-template-columns: 400px 200px 300px;
+  grid-template-rows: 300px 200px 100px;
+} */
+
+/** Grid container con filas y columnas con fr */
+
+/* .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 3fr 1fr;
+} */
+
+
+/** Uso del repeat */
+
+
+/* .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 150px 50px 100px 100px;
+  grid-template-rows: 1fr;
+
+} */
+
+/** Uso del minmax, se ha de cambiar el tamaño de la pantalla para verlo en acción*/
+
+/* .container {
+  display: grid;
+  grid-template-columns: minmax(200px, 800px) 800px;
+  grid-template-rows: 3fr 1fr 1fr;
+} */
+
+/** Uso del minmax y del repeat, se ha de cambiar el tamaño de la pantalla para verlo en acción*/
+
+/*
+.container{
+  display: grid;
+  grid-template-columns: minmax(500px, 60%) repeat(2,1fr);
+  grid-template-rows: 3fr 1fr 1fr;
+}
+*/
+
+/** Uso del column-gap y row-gap */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3fr 1fr 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: .5rem;
+}
+
+/** Grid template areas ejemplo de disposición */
+
+/*
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: sidebar;
+}
+
+.item3 {
+  grid-area: main;
+}
+
+.item4 {
+  grid-area: footer;
+}
+
+.item5 {
+  grid-area: footer;
+  display: none;
+}
+
+.item6 {
+  grid-area: footer;
+  display: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "header header header header"
+    "main main main sidebar"
+    "main main main sidebar"
+    "footer footer footer footer"
+}
+*/

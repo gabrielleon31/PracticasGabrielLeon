@@ -1,0 +1,15 @@
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\bin\Debug\net8.0\ExamenEstudio.exe
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\bin\Debug\net8.0\ExamenEstudio.deps.json
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\bin\Debug\net8.0\ExamenEstudio.runtimeconfig.json
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\bin\Debug\net8.0\ExamenEstudio.dll
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\bin\Debug\net8.0\ExamenEstudio.pdb
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\obj\Debug\net8.0\ExamenEstudio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\obj\Debug\net8.0\ExamenEstudio.AssemblyInfoInputs.cache
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\obj\Debug\net8.0\ExamenEstudio.AssemblyInfo.cs
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\obj\Debug\net8.0\ExamenEstudio.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\obj\Debug\net8.0\ExamenEstudio.sourcelink.json
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\obj\Debug\net8.0\ExamenEstudio.dll
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\obj\Debug\net8.0\refint\ExamenEstudio.dll
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\obj\Debug\net8.0\ExamenEstudio.pdb
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\obj\Debug\net8.0\ExamenEstudio.genruntimeconfig.cache
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF1\ExamenEstudio\obj\Debug\net8.0\ref\ExamenEstudio.dll

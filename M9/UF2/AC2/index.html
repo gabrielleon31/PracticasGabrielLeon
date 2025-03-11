@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="./img/fondo.jpg" alt="Fondo" class="background-img">
+    <header>
+        <h1>Comparacion de Formatos de Audio</h1>
+    </header>
+
+    <main>
+        <section id="audio-container">
+            <div class="audio-grid">
+                <div class="audio-card">
+                    <img src="./img/imagen.jpg" alt="MP3">
+                    <audio id="mp3" controls>
+                        <source src="./audios/Faint_LK.mp3" type="audio/mpeg">
+                    </audio>
+                    <p>MP3 - Media calidad</p>
+                </div>
+
+                <div class="audio-card">
+                    <img src="./img/imagen.jpg" alt="OGG Baja Calidad">
+                    <audio id="ogg_low" controls>
+                        <source src="./audios/Faint_LK_B.ogg" type="audio/ogg">
+                    </audio>
+                    <p>OGG - Baja calidad</p>
+                </div>
+
+                <div class="audio-card">
+                    <img src="./img/imagen.jpg" alt="WAV Mala Calidad">
+                    <audio id="wav_low" controls>
+                        <source src="./audios/Faint_LK_B.wav" type="audio/wav">
+                    </audio>
+                    <p>WAV - Mala calidad</p>
+                </div>
+
+                <div class="audio-card">
+                    <img src="./img/imagen.jpg" alt="WAV Buena Calidad">
+                    <audio id="wav_high" controls>
+                        <source src="./audios/Faint_LK.wav" type="audio/wav">
+                    </audio>
+                    <p>WAV - Buena calidad</p>
+                </div>
+
+                <div class="audio-card">
+                    <img src="./img/imagen.jpg" alt="FLAC">
+                    <audio id="flac" controls>
+                        <source src="./audios/Faint_LK.flac" type="audio/flac">
+                    </audio>
+                    <p>FLAC - Máxima calidad</p>
+                </div>
+
+                <div class="audio-card">
+                    <img src="./img/imagen.jpg" alt="OGG Media Calidad">
+                    <audio id="ogg_high" controls>
+                        <source src="./audios/Faint_LK.ogg" type="audio/ogg">
+                    </audio>
+                    <p>OGG - Media calidad</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="controls">
+            <h2>Controles Globales</h2>
+            <button id="play">Play</button>
+            <button id="pause">Pausa</button>
+            <button id="vol-up">Volumen +</button>
+            <button id="vol-down">Volumen -</button>
+            <button id="seek-forward">+5 segundos</button>
+            <button id="seek-backward">-5 segundos</button>
+            <button id="speed-up">Velocidad +</button>
+            <button id="speed-down">Velocidad -</button>
+            <button id="mute">Mute/Unmute</button>
+        </section>
+
+        <section id="info">
+            <h2>Diferencias :)</h2>
+            <table>
+                <tr>
+                    <th>Formato</th>
+                    <th>Calidad</th>
+                    <th>Peso</th>
+                    <th>Casos de uso</th>
+                </tr>
+                <tr>
+                    <td>MP3</td>
+                    <td>Media</td>
+                    <td>Mediano</td>
+                    <td>Streaming, musica</td>
+                </tr>
+                <tr>
+                    <td>OGG</td>
+                    <td>Baja</td>
+                    <td>Pequeño</td>
+                    <td>Web y juegos</td>
+                </tr>
+                <tr>
+                    <td>WAV</td>
+                    <td>Mala</td>
+                    <td>Grande</td>
+                    <td>Archivos de referencia</td>
+                </tr>
+                <tr>
+                    <td>WAV</td>
+                    <td>Alta</td>
+                    <td>Muy grande</td>
+                    <td>Edicion profesional</td>
+                </tr>
+                <tr>
+                    <td>FLAC</td>
+                    <td>Maxima</td>
+                    <td>Grande</td>
+                    <td>Archivar musica sin perdidas</td>
+                </tr>
+                <tr>
+                    <td>OGG</td>
+                    <td>Media</td>
+                    <td>Mediano</td>
+                    <td>Mejor alternativa a MP3</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

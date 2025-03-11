@@ -1,0 +1,69 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fila-superior, .fila-media, .fila-inferior {
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+.bloque {
+    display: inline-block;
+    margin: 5px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.grande {
+    width: 68.5%;
+    height: 155px;
+    background-color: #FF6347;
+}
+
+.pequeño {
+    width: 28.5%;
+    height: 155px;
+    background-color: #FF6347;
+}
+
+.extragrande {
+    width: 50%;
+    height: 400px;
+    background-color: #df9a33;
+}
+
+.mediano {
+    width: 97.5%;
+    height: 198.5px;
+    background-color: #58135e;
+    display: block;
+}
+
+.bloques-verticales {
+    width: 48%;
+    float: right;
+}
+
+.azul {
+    width: 27%;
+    height: 100px;
+    background-color: #256361;
+    display: inline-block;
+}
+
+.azul-grande {
+    width: 42%;
+    height: 100px;
+    background-color: #256361;
+    display: inline-block;
+}
