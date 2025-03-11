@@ -1,0 +1,15 @@
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\bin\Debug\net8.0\lema.exe
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\bin\Debug\net8.0\lema.deps.json
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\bin\Debug\net8.0\lema.runtimeconfig.json
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\bin\Debug\net8.0\lema.dll
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\bin\Debug\net8.0\lema.pdb
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\obj\Debug\net8.0\lema.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\obj\Debug\net8.0\lema.AssemblyInfoInputs.cache
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\obj\Debug\net8.0\lema.AssemblyInfo.cs
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\obj\Debug\net8.0\lema.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\obj\Debug\net8.0\lema.sourcelink.json
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\obj\Debug\net8.0\lema.dll
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\obj\Debug\net8.0\refint\lema.dll
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\obj\Debug\net8.0\lema.pdb
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\obj\Debug\net8.0\lema.genruntimeconfig.cache
+C:\Users\Gabriel\Desktop\2 DAW\marc\M3\UF5\lema\obj\Debug\net8.0\ref\lema.dll
