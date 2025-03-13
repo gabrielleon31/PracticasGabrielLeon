@@ -4,92 +4,59 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    /* Imagen de fondo (ajusta la ruta según corresponda) */
+    background-image: url('./resources/img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Estilos generales para el header */
+/* Estilos para el header */
 header {
     background-color: #333;
     padding: 15px;
 }
 
-/* Estilos para la barra de navegación */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Estilos para la imagen de logo */
-.navbar-logo img {
-    width: 50px; /* Ajusta el tamaño del logo según sea necesario */
+/* Ajuste de tamaño para el SVG (usa la clase "my-svg") */
+.my-svg {
+    /* Mostramos el SVG en su tamaño completo basado en el viewBox 96x96 */
+    width: 96px;
     height: auto;
 }
 
-/* Estilos para los enlaces */
-.navbar-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px; /* Espacio entre los enlaces */
-}
-
-.navbar-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.navbar-links a:hover {
-    color: #f4a095; /* Cambia el color al pasar el cursor */
-}
-
-main {
-    padding: 20px;
-}
-
-/* Ajuste del contenedor de los carrousels para que estén alineados */
-.carrousel-container {
-    display: flex;
-    justify-content: space-between; /* Coloca los carrousels uno al lado del otro */
-    margin-top: 30px;
-    align-items: flex-start; /* Alinea los carrousels por la parte superior */
-}
-
-/* Ajustes para los carrousels de SVGs y PNGs */
+/* Contenedores de carrousel */
 .carousel-svgs, .carousel-pngs {
     position: relative;
-    width: 48%; /* Ajusta el ancho de cada carrousel */
-    overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+    width: 100%;
+    overflow: hidden;
     display: flex;
-    flex-direction: column; /* Esto organiza el contenido en una columna */
-    justify-content: flex-start; /* Alinea los elementos al principio */
-    align-items: center; /* Centra los elementos horizontalmente */
-    height: 300px; /* Configura la altura para que ambos carrousels tengan la misma altura */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 300px;
 }
 
-/* Ajuste del contenedor de imágenes */
+/* Contenedor de imágenes del carousel */
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease;
-    width: 100%; /* Ajusta el tamaño para que ocupe el 100% del contenedor */
+    width: 100%;
 }
 
-.carousel-item {
+/* Clase renombrada para evitar conflictos con Bootstrap */
+.custom-carousel-item {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0; /* Evita que las imágenes se reduzcan */
+    flex-shrink: 0;
 }
 
-/* Botones de navegación para los carrousels */
+/* Botones de navegación en los carrousels */
 .carousel-svgs .prev, .carousel-svgs .next,
 .carousel-pngs .prev, .carousel-pngs .next {
-    position: absolute;  /* Solo estos botones tienen posición absoluta */
+    position: absolute;
     top: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -119,7 +86,7 @@ main {
     transform: translateY(-50%);
 }
 
-/* Título general centrado */
+/* Títulos de secciones */
 .carousel-title {
     text-align: center;
     font-size: 2rem;
@@ -128,7 +95,35 @@ main {
     color: #333;
 }
 
-/* Estilos generales para el contenedor de los audios */
+/* Estilos para contenedor de audios */
+.card {
+    max-width: 220px;  /* Ajusta según el tamaño que desees */
+    margin: 0 auto;
+  }
+  
+  /* Reducir el tamaño de la imagen de la tarjeta */
+  .card-img-top {
+    width: 215px !important; /* Fuerza un ancho menor */
+    height: 100px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 10%;
+    margin: 0 auto;
+  }
+  
+  /* Reducir el tamaño del reproductor de audio */
+  .card-body audio {
+    max-width: 200px;  /* Ajusta este valor según lo que necesites */
+    width: 100%;
+    display: block;
+    margin: 10px auto;
+  }
+  
+  /* Opcional: reducir el tamaño de la fuente en la descripción */
+  .card-text {
+    font-size: 0.9rem;
+  }
+
 .audio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -151,67 +146,62 @@ main {
     border-radius: 8px;
 }
 
+/* Limitar ancho de los reproductores de audio */
 .audio-card audio {
+    max-width: 300px;
     width: 100%;
     margin-top: 10px;
 }
 
-/* Estilo del contenedor de controles */
+/* Contenedor de controles globales */
 #controls-container {
     display: flex;
-    flex-direction: column;  /* Coloca el título arriba de los botones */
-    align-items: center;     /* Centra los elementos */
-    gap: 10px;               /* Espacio entre los botones y el título */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     margin-top: 30px;
 }
 
-/* Estilo del título */
-#controls h2 {
-    margin-bottom: 15px; /* Espacio entre el título y los botones */
-    text-align: center; /* Centra el título */
-}
-
-/* Estilos generales para los controles */
 #controls {
     display: flex;
-    flex-wrap: wrap;  /* Permite que los botones se ajusten a una nueva línea si es necesario */
-    flex-direction: row;  /* Alineación en fila */
-    justify-content: center; /* Centra los botones en el contenedor */
-    gap: 10px;               /* Espacio entre los botones */
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Estilos para los botones dentro de los controles */
 #controls button {
     padding: 12px;
     border: none;
-    background: #007BFF;
+    background: #448dda;
     color: white;
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
-    width: 120px;  /* Ajusta el ancho para que los botones no sean tan grandes */
+    width: 120px;
     text-align: center;
-    box-sizing: border-box; /* Asegura que el padding se tenga en cuenta en el tamaño */
-    margin: 5px; /* Añade un pequeño margen */
+    box-sizing: border-box;
+    border-radius: 40%;
+    margin: 0 auto;
 }
 
 #controls button:hover {
     background: #0056b3;
 }
 
+/* Sección de Video */
 .section-video {
     align-items: center;
     text-align: center;
     justify-content: center;
 }
 
-/* Estilos para la sección de contacto */
+/* Sección de Contacto */
 #contacto {
     margin-top: 40px;
     text-align: center;
 }
 
-/* Estilo general del formulario */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -221,20 +211,17 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo de los campos del formulario */
 .contact-form .form-group {
     margin-bottom: 15px;
     text-align: left;
 }
 
-/* Estilo de las etiquetas */
 .contact-form label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
 
-/* Estilo de los campos de entrada */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -245,8 +232,9 @@ main {
     box-sizing: border-box;
 }
 
-/* Estilo para el botón de envío */
-.submit-button {
+/* Botón de envío */
+.submit-button, 
+.btn-success {
     background-color: #007BFF;
     color: white;
     padding: 12px 25px;
@@ -256,59 +244,41 @@ main {
     cursor: pointer;
 }
 
-.submit-button:hover {
+.btn-success:hover {
     background-color: #0056b3;
 }
 
-/* Estilos para las redes sociales en el pie de página */
-.social-media {
-    display: flex;
-    justify-content: center; /* Centra los iconos horizontalmente */
-    gap: 20px; /* Espacio entre los iconos */
-    margin-top: 20px;
-}
-
-.social-icon {
-    font-size: 30px; /* Tamaño de los iconos */
-    color: #333; /* Color base de los iconos */
-    text-decoration: none; /* Elimina el subrayado */
-    transition: color 0.3s ease; /* Transición suave al cambiar de color */
-}
-
-.social-icon:hover {
-    color: #007BFF; /* Cambia el color de los iconos al pasar el cursor */
-}
-
-/* Estilos para el pie de página */
+/* Footer y Redes Sociales */
 footer {
     background-color: #f4f4f4;
     padding: 20px 0;
     margin-top: 40px;
 }
 
-/* Contenedor para el contenido del footer */
 .footer-content {
     display: flex;
-    flex-direction: column; /* Coloca los elementos uno debajo del otro */
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Estilos para las redes sociales */
 .social-media {
     display: flex;
-    justify-content: center; /* Centra los iconos */
-    gap: 20px; /* Espacio entre los iconos */
+    justify-content: center;
+    gap: 20px;
     margin-top: 10px;
 }
 
 .social-icon {
-    font-size: 30px; /* Tamaño de los iconos */
-    color: #333; /* Color de los iconos */
+    font-size: 30px;
+    color: #333;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-    color: #007BFF; /* Cambia el color de los iconos al pasar el cursor */
+    color: #007BFF;
 }
+
+
+  

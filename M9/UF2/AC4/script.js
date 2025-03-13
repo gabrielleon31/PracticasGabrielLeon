@@ -52,7 +52,7 @@ let currentIndexSVG = 0;
 let currentIndexPNG = 0;
 
 function moveSlideSVG(direction) {
-    const items = document.querySelectorAll('.carousel-svgs .carousel-item');
+    const items = document.querySelectorAll('.carousel-svgs .custom-carousel-item');
     const totalItems = items.length;
 
     currentIndexSVG += direction;
@@ -68,7 +68,7 @@ function moveSlideSVG(direction) {
 }
 
 function moveSlidePNG(direction) {
-    const items = document.querySelectorAll('.carousel-pngs .carousel-item');
+    const items = document.querySelectorAll('.carousel-pngs .custom-carousel-item');
     const totalItems = items.length;
 
     currentIndexPNG += direction;
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     formulario.addEventListener("submit", (event) => {
         event.preventDefault(); // Prevenir el envío real del formulario
-        // Muestra una alerta usando sweetAlert
+        // Muestra una alerta usando SweetAlert2
         Swal.fire({
             title: '¡Mensaje Enviado!',
             text: 'Gracias por tu mensaje, nos pondremos en contacto contigo pronto.',
@@ -102,4 +102,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
