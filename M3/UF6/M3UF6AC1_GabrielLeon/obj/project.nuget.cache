@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9NT/xdK9o0g=",
+  "dgSpecHash": "Anm9bn/d1iY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gabriel\\Desktop\\2 DAW\\marc\\M3\\UF6\\M3UF6AC1_GabrielLeon\\M3UF6AC1_GabrielLeon.csproj",
+  "projectFilePath": "C:\\Users\\Gabriel\\Desktop\\2DAW\\marc\\M3\\UF6\\M3UF6AC1_GabrielLeon\\M3UF6AC1_GabrielLeon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabriel\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

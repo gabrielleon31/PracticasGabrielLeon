@@ -1220,11 +1220,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabriel\\Desktop\\2 DAW\\marc\\M3\\UF6\\M3UF6AC1_GabrielLeon\\M3UF6AC1_GabrielLeon.csproj",
+      "projectUniqueName": "C:\\Users\\Gabriel\\Desktop\\2DAW\\marc\\M3\\UF6\\M3UF6AC1_GabrielLeon\\M3UF6AC1_GabrielLeon.csproj",
       "projectName": "M3UF6AC1_GabrielLeon",
-      "projectPath": "C:\\Users\\Gabriel\\Desktop\\2 DAW\\marc\\M3\\UF6\\M3UF6AC1_GabrielLeon\\M3UF6AC1_GabrielLeon.csproj",
+      "projectPath": "C:\\Users\\Gabriel\\Desktop\\2DAW\\marc\\M3\\UF6\\M3UF6AC1_GabrielLeon\\M3UF6AC1_GabrielLeon.csproj",
       "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabriel\\Desktop\\2 DAW\\marc\\M3\\UF6\\M3UF6AC1_GabrielLeon\\obj\\",
+      "outputPath": "C:\\Users\\Gabriel\\Desktop\\2DAW\\marc\\M3\\UF6\\M3UF6AC1_GabrielLeon\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config"
