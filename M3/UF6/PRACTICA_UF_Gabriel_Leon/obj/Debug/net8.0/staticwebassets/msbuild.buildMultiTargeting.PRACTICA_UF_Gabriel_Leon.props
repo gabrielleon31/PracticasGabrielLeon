@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PRACTICA_UF_Gabriel_Leon.props" />
+</Project>
